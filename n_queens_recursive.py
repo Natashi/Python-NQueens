@@ -93,11 +93,17 @@ class NQueens_Recursive:
 
 if __name__ == '__main__':
 	import os
+	import sys
 	import time
 	os.system('')
 	
-	nRow = int(input('Board size: '))
-	# nRow = 8
+	nRow = 8
+	if len(sys.argv) >= 2:
+		nRow = int(sys.argv[1])
+		print('Board size =', nRow)
+	else:
+		nRow = int(input('Board size: '))
+	
 	if nRow < 4 or nRow > 50:
 		print('Size out of range')
 		exit()

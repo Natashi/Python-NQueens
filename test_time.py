@@ -7,7 +7,7 @@ from n_queens_recursive import *
 nq_it = NQueens_Iterative()
 nq_rc = NQueens_Recursive()
 
-for nRow in range(4, 20):
+for nRow in range(4, 20 + 1):
 	seed = time.perf_counter_ns() % 256
 	
 	nq_it.InitializeState(nRow, seed)
